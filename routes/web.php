@@ -31,7 +31,12 @@ Route::middleware('auth')->group(function() {
         return Inertia::render('Dashboard');
     })->middleware('verified')->name('dashboard');
 
-    Route::resource('tasks', TaskController::class);
+    Route::resource('tasks', TaskController::class)->except('show');
+
+//    Route::get('/tasks', [TaskController::class, 'index'])->name('tasks.index');
+//    Route::get('/tasks/create', [TaskController::class, 'create'])->name('tasks.create');
+
+    Route::post('/tasks/{task}/completed', [TaskController::class, 'completed'])->name('tasks.completed');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

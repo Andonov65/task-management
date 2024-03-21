@@ -1,6 +1,7 @@
 <script setup>
 import ApplicationLogo from '@/Components/ApplicationLogo.vue';
 import { Link } from '@inertiajs/vue3';
+import {Modal} from '/vendor/emargareten/inertia-modal'
 </script>
 
 <template>
@@ -16,5 +17,6 @@ import { Link } from '@inertiajs/vue3';
         >
             <slot />
         </div>
+        <Modal/>
     </div>
 </template>

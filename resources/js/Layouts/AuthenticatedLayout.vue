@@ -6,6 +6,8 @@ import DropdownLink from '@/Components/DropdownLink.vue';
 import NavLink from '@/Components/NavLink.vue';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
 import { Link } from '@inertiajs/vue3';
+import {Modal} from '/vendor/emargareten/inertia-modal'
+import CustomAlert from "@/Components/CustomAlert.vue";
 
 const showingNavigationDropdown = ref(false);
 </script>
@@ -148,8 +150,10 @@ const showingNavigationDropdown = ref(false);
 
             <!-- Page Content -->
             <main>
+                <CustomAlert/>
                 <slot />
             </main>
         </div>
+        <Modal/>
     </div>
 </template>

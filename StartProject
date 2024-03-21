@@ -1,0 +1,9 @@
+1. Clone the repository on your PC
+2. Copy .env.example and make a .env file
+3. Set up database credentials
+4. In your terminal run  `php artisan migrate:fresh --seed`
+5. In your terminal run `php artisan serve` and in other terminal run `npm run dev`
+6. Login with one of the given credentials
+    jhon@mail.com  jhon123
+    bob@mail.com   bob123
+7. Go on `Tasks` tab and you can filter, sort, create new, edit, delete, mark as paid tasks
